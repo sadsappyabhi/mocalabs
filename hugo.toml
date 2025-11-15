@@ -2,6 +2,7 @@ baseURL = 'https://mocalabs.dev/'
 languageCode = 'en-us'
 title = 'Mocalabs'
 theme = "hugo-theme-monochrome"
+canonifyURLs = true
 
 [caches]
   [caches.images]
