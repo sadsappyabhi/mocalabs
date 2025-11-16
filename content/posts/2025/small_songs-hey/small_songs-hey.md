@@ -24,6 +24,14 @@ Arlo: builds from the intro. Kyle plays a beautiful harmonized accompaniment whi
 
 "Hey" opens with a fast line from Kyle and Josh which leads into a group improvisation that eventually gives way to Dan and Josh setting up time that sounds exactly like opening your window on a dark quiet rainy evening. After Fran enters with the melody we hear some lovely dovetailed accompaniment from Alex and Kyle while the lyrical content draws you in to to the slowly developing and ever-gorgeous melody. 
 
+> Do you want to go throw rocks with me?
+
+*Yes, yes I very much do! Especially if we can explore some train tracks at the same time!*
+
+> Let's go outside!
+
+*Okay, I guess I'll leave that to you humans ...*
+
 The way the resolution to tonic in the choruses of "Where are you now" seem to ebb and flow and only come together at the last moment is a thing of true beauty. I imagine my heart as a way-underfilled water balloon bouncing, (falling), (dripping?) on both sides of some metaphoric divide, each pass being equally beautiful as it is destructive. 
 
 Speaking of ways to take the simple idea of tension -> resolution (Keep reading! Boy, do I have a *redacted* record to sell you! It's by a group called Small Songs!).
