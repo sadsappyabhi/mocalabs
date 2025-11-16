@@ -39,6 +39,8 @@ Chills and goosebumps. Every. single. time. Without fail.
 
 ![Abhi's favorite line from Alex Burgoyne on 'New Shoes'](/posts/2025/small_songs-hey/alex-lick.png)
 
+
+
 > "Kick the ball. Pass it. Get in the goal."
 
 Jeez - the way Fran enters with this melody with Alex's counter - so *effing* gorgeous. Uses one of my favorite mechanisms - repeat over and over with increasing intensity. 
