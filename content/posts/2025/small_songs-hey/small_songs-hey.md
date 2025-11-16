@@ -24,7 +24,7 @@ Arlo: builds from the intro. Kyle plays a beautiful harmonized accompaniment whi
 
 "Hey" opens with a fast line from Kyle and Josh which leads into a group improvisation that eventually gives way to Dan and Josh setting up time that sounds exactly like opening your window on a dark quiet rainy evening. After Fran enters with the melody we hear some lovely dovetailed accompaniment from Alex and Kyle while the lyrical content draws you in to to the slowly developing and ever-gorgeous melody. 
 
-> Do you want to go throw rocks with me?
+> Do you want to throw rocks with me?
 
 *Yes, yes I very much do! Especially if we can explore some train tracks at the same time!*
 
