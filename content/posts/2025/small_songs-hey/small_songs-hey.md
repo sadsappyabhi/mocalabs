@@ -26,7 +26,11 @@ Arlo: builds from the intro. Kyle plays a beautiful harmonized accompaniment whi
 
 > Do you want to go throw rocks with me?
 
+<<<<<<< HEAD
 *Yes, yes I very much do! Especially if we can explore some train tracks at the same time!*
+=======
+*Yes, yes I very much do!*
+>>>>>>> c1424ac0f3bf06ccd3d27636db1d617568e2253d
 
 > Let's go outside!
 
