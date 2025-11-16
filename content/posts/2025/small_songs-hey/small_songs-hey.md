@@ -28,7 +28,7 @@ The way the resolution to tonic in the choruses of "Where are you now" seem to e
 
 Speaking of ways to take the simple idea of tension -> resolution (Keep reading! Boy, do I have a *redacted* record to sell you! It's by a group called Small Songs!).
 
-One of the moments of this record that tends to find its way into my head and linger there for months at a time is the transition into THE LAKE. I think it's safe to say that the amount of time that the phrase, "The river's flowing very fast, I want to go and swim ..." has repeated hauntingly between my ears as I go about my day would probably aggregate to a total of several years at the very least ... 
+One of the moments of this record that tends to find its way into my head and linger there for months at a time is the transition into THE LAKE. I think it's safe to say that the amount of time that the phrase, "The river's flowing very fast, I want to go and swim ..." has repeated hauntingly between my ears as I go about my day would probably aggregate to a total of several years at the very least ... (and the record only came out in 2016!)
 
 >"Oh what fun it is to swim. I-n the lake.
 >Oh what fun it is to swim. I-n the lake."
@@ -38,7 +38,6 @@ Chills and goosebumps. Every. single. time. Without fail.
 "New Shoes" features one of my favorite "Burgoyne-ism's" of all time. Such a great way to use a tritone-sub/half-step resolution in a song context. 
 
 ![Abhi's favorite line from Alex Burgoyne on 'New Shoes'](/posts/2025/small_songs-hey/alex-lick.png)
-
 
 
 > "Kick the ball. Pass it. Get in the goal."
