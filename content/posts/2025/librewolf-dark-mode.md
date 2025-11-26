@@ -1,6 +1,5 @@
 +++
 date = '2025-11-26T13:29:12-06:00'
-draft = true
 title = 'Librewolf Dark Mode'
 +++
 
