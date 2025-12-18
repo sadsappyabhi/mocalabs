@@ -1,5 +1,5 @@
 +++
-date = '2025-12-18T13:21:14-06:00'
+date = '2025-12-04T13:21:14-06:00'
 draft = false
 title = 'Battery Management With TLP'
 +++
