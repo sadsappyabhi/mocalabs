@@ -12,7 +12,11 @@ On my MacBook, I have been using [Al Dente](https://github.com/AppHouseKitchen/A
 $ sudo emerge -a sys-power/tlp
 ```
 
+<<<<<<< HEAD
 After skimming the introduction, I went ahead and installed the package, and then opened up `/etc/tlp.conf` to check out the configuration. TLP has extremely sane defaults (turns out, this is kind of the whole point of TLP, but I didn't know that yet), and most of going through the config file was just turning features that I wanted on by uncommenting those lines. The documentation within the config file itself is quite comprehensive and easy to follow. The default values for each option are listed and I don't think I really tweaked anything besides not turning on hardware-specific features for hardware that I'm not using (AMD/Intel, NVMe/SSD, etc.)
+=======
+After skimming the introduction, I went ahead and installed the package, and then opened up `/etc/tld.conf` to check out the configuration. TLP has extremely sane defaults (turns out, this is kind of the whole point of TLP, but I didn't know that yet), and most of going through the config file was just turning features that I wanted on by uncommenting those lines. The documentation within the config file itself is quite comprehensive and easy to follow. The default values for each option are listed and I don't think I really tweaked anything besides not turning on hardware-specific features for hardware that I'm not using (AMD/Intel, NVMe/SSD, etc.)
+>>>>>>> f9cbe9d7b05b180aa8b53b5d35b8012f7404ee27
 
 Then, simply start it with:
 
@@ -46,7 +50,11 @@ Then I ran a test to make sure everything was working as intended. I was already
 $ sudo tlp discharge 50
 ```
 
+<<<<<<< HEAD
 My battery isn't in the greatest shape, unfortunately, so this didn't take very long. Then I just let TLP do it's thing and watched as it charged from 50% up to 80% where it stopped.
+=======
+My battery isn't in the greatest shape, unfortunately, so this took less time than it should have. Then I just let TLP do it's thing and watched as it charged from 50% up to 80% where it stopped.
+>>>>>>> f9cbe9d7b05b180aa8b53b5d35b8012f7404ee27
 
 Satisfied with the results of my quick test, I then made sure TLP would start automatically at boot with
 
