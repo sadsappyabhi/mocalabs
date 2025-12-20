@@ -1,8 +1,11 @@
 baseURL = 'https://mocalabs.dev/'
 languageCode = 'en-us'
-title = 'Mocalabs'
+title = 'Mocalabs: Abhilasha Figueroa'
 theme = "hugo-theme-monochrome"
 
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+[params]
+footer = "Copyright &#169; 2025 - 2026 Abhilasha Figueroa"
