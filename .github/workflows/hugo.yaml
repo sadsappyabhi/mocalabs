@@ -22,7 +22,7 @@ jobs:
       GO_VERSION: 1.25.3
       HUGO_VERSION: 0.152.0
       NODE_VERSION: 22.20.0
-      TZ: Europe/Oslo
+      TZ: America/Chicago
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -82,7 +82,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/" \
+            # --baseURL "${{ steps.pages.outputs.base_url }}/" \
             --cacheDir "${{ runner.temp }}/hugo_cache"
       - name: Cache save
         id: cache-save
