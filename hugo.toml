@@ -1,6 +1,6 @@
 baseURL = 'https://mocalabs.dev/'
 languageCode = 'en-us'
-title = 'Mocalabs: Abhilasha Figueroa'
+title = 'Mocalabs'
 theme = "hugo-theme-monochrome"
 
 [caches]
@@ -9,3 +9,18 @@ theme = "hugo-theme-monochrome"
 
 [params]
 footer = "Copyright &#169; 2025 - 2026 Abhilasha Figueroa"
+author = "Abhilasha Figueroa"
+  [params.list_layout]
+  enable_pagination = true
+
+[[menu.navbar]]
+identifier = "about"
+title = "About"
+url = "/about/"
+weight = 100
+
+[[menu.navbar]]
+identifier = "posts"
+title = "Posts"
+url = "/posts/"
+weight = 90
