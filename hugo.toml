@@ -8,6 +8,7 @@ theme = "hugo-theme-monochrome"
     dir = ':cacheDir/images'
 
 [params]
+color_scheme = "dark"
 footer = "Copyright &#169; 2025 - 2026 Abhilasha Figueroa"
 author = "Abhilasha Figueroa"
   [params.list_layout]
