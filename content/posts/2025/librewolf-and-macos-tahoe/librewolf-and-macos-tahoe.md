@@ -4,8 +4,6 @@ draft = false
 title = 'Librewolf and macOS Tahoe'
 +++
 
-# Librewolf and macOS Tahoe
-
 Last night I updated a less-often used machine of mine from macOS 15 Sequoia to Tahoe 26.1. When launching Librewolf, I was greeted by this all-too-familiar error about the app being "damaged"...)
 
 

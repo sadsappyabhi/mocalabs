@@ -3,8 +3,6 @@ date = '2025-08-02'
 title = 'Small Songs - Hey'
 +++
 
-# Small Songs - Hey
-
 Maybe writing a "review" about an album from a decade ago is a little strange. However, what I will attempt to show in this [essay](https://en.wikipedia.org/wiki/Essay) is just how timelessly gorgeous and perfectly executed this recording is.
 
 ![Small Songs logo of a little bird](/posts/2025/small_songs-hey/small-songs-bird.png)

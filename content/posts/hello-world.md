@@ -3,8 +3,6 @@ date = '2025-08-01'
 title = 'Hello, World!'
 +++
 
-# Hello, World!
-
 This is the first post for this new blog.
 
 Back in 2009, I created my first blog at the suggestion of [Mark Flugge](https://markflugge.com/), who told me upon turning in my final paper for his Jazz Styles & Analysis course, "You know, you are a very gifted writer. I would encourage you to continue writing after you graduate, regardless of whether it is about music or something completely different!"
