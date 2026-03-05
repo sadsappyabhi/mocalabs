@@ -1,0 +1,9 @@
+# Welcome to Mocalabs!
+
+Hello and welcome to Mocalabs: Blog of Abhilasha Figueroa. This is a personal blog that serves three main functions:
+
+1. A place where I can write about my work as a sort of portfolio/landing page.
+2. A place where I can write about computing topics that I find interesting (which will likely be centered around Linux and FOSS).
+3. A place for me to occasionally write about music. After all, my life as a musician predates my life as a computer nerd by a few years. 
+
+If you'd like to drop me a message, send me some hate mail, or [correct me on something where I am wrong](https://xkcd.com/386/), you can do so at abhilasha [dot] figueroa [at] protonmail [dot] com.
