@@ -1,17 +1,44 @@
 ---
 date: 2026-05-02T15:03:16-06:00
 title: 'VPS Migration: abhiche.com'
-description: "On the structure of refactoring my musician website 'abhiche.com' from static vanilla HTML/CSS to Spring Boot w/ Thymeleaf"
+description: "On the refactor of my musician website 'abhiche.com' from static vanilla HTML/CSS to Spring Boot w/ Thymeleaf"
 ---
 
-After exploring the basics of using docker and Traefik to host my blog, I immediately wanted to migrate my musician webpage from GitHub Pages to my new VPS as well. This is an almost entirely static site that is even too simple for an SSG. In it's initial version, I used a jQuery script to display HTML fragments in a content div on the landing page. So basically a hack way to emulate SPA-like routing, but without any actual URL routing. I wanted the content to update without requiring a full page reload and I didn't know any better at the time so I just went for it.
+After exploring the basics of using Docker and Traefik to host my blog, I immediately wanted to migrate my musician website from GitHub Pages to my new VPS as well. This is an almost entirely static site that is even too simple for an SSG. In it's initial version, I used a jQuery script to display HTML fragments in a content div on the landing page. So basically a hack way to emulate SPA-like routing, but without any actual URL routing. I wanted the content to update without requiring a full page reload and I didn't know any better at the time so I just went for it.
 
-```jquery
-// Include original jquery script here. Include a link to the SO answer where you got it if you still have it!
+```javascript
+<div class="content" id="root">
+<!-- Content from .menu gets loaded here-->
+</div>
+
+
+<script src ="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script type="module">
+    import { loadPerformances } from './js/performances.js';
+
+    $(document).ready(function() {
+        $('#root').load('./home.html');
+
+        $('#navigation a').click(function(e) {
+            e.preventDefault();
+            var url = $(this).attr('href');
+            $('#root').load(url, function() {
+                if (url.includes('performances.html')) {
+                    loadPerformances();
+                }
+            });
+        })
+    })
+</script>
 ```
+The archived repo can be found [here](https://github.com/sadsappyabhi/abhiche). 
 
 Of course, since this approach does not *actually* include any routing, there was no way for me to send someone a link to my performance schedule or discography with links like abhiche.com/performances or abhiche.com/recordings. Now, the music scenes that I am involved in are quite small so this site probably never got much traffic to begin with, but it still irked me that my artist bio (as it appeared in publications by [Ende Tymes](https://www.halfnormal.com/endetymes/), for example) contained such an amateur deficiency. When I looked into how to resolve this issue every resource I could find was pointing me towards a front-end framework or JS library that would have been overkill for what I needed. That or I would be recommended to utilize SSR which wasn't an option at the time since I was taking advantage of free hosting via GitHub Pages. 
 
-I recently turned in my capstone project for my CS degree which was a web app with a Spring Boot backend and a React frontend. I learned a lot and now knew a lot more than I previously did regarding the WHY around the JPA - particularly separating routing logic from business logic and even queries themselves. Because I was enjoying all of the subtle nudging it took to get my Entities, DTOs, Repositories, Controllers, and Services working together amongst their respective classes and records, I went ahead and rebuilt my website as a Spring Boot application! Not wanting to bring in an entire front-end framework for a site this simple, I decided to use Thymeleaf to allow me to write HTML fragments in stead. The irony is that I no longer have the SPA-like loading of only the content div that was so important to me previously. However my satisfaction in utilizing DRY to a pretty great extent (thanks, Thymeleaf!) is keeping me perfectly content for now ... Of course this is something I should revisit when I address the issue of "Why am I dealing with the overhead of an entire JVM just for URL routing and a single GET request when I could nix the database altogether and write some simple CSV parsing logic?!?!" For reference, I created a Postgres DB to store the list of my performances, and the /performances endpoint performs a `SELECT *` on that table and returns two lists: one for upcoming performances and one for those that are in the past. While writing the classes for this module in SB/JPA, I enjoyed the convenience of seeding the data to the DB from a CSV file. Since the application never performs any writes to the DB outside of the init script, having the database itself is also overkill for what the end result is. I think a more appropriate solution would be to write an HTTP server in GO along with a CSV parser. That way I could end up with a very small self-contained binary and the CSV file would be the "version of truth" for the list of my performances (which could remain in the repo and be version controlled as well). However, I will need to learn how templating works in GO and whether or not I want to use something like Templ instead of the standard library. So far, I don't see any reason to stray from the standard library for the HTTP server part. 
+I recently turned in my capstone project for my CS degree which was a web app with a Spring Boot backend and a React frontend. I learned a lot and now know a lot more than I previously did regarding the WHY around the design/structure of the JPA -- particularly with how such a modularized structure and separating routing and business logic makes for a more maintainable codebase. Because I was enjoying all of the subtle nudging it took to get my Entities, DTOs, Repositories, Controllers, and Services working together amongst their respective classes and records, I went ahead and rebuilt my website as a Spring Boot application! 
 
-To see the site in all it's over-engineered glory you can [click this link](https://abhiche.com) or the one on the About page. Hopefully I'll put together a more streamlined alternative soon, but until then this was certainly a fun side project and it is certainly serving its purpose!
+Not wanting to bring in an entire front-end framework for a site this simple, I decided to use Thymeleaf to allow me to write HTML fragments instead. The irony is that I no longer have the SPA-like loading of content fragments in the content div that was so important to me previously. However my satisfaction in utilizing DRY to a pretty great extent (thanks, Thymeleaf!) is keeping me perfectly content for now ... Of course this is something I should revisit when I address the issue of "Why am I dealing with the overhead of an entire JVM just for URL routing and a single GET request when I could nix the database altogether and write some simple CSV parsing logic?!?!" For reference, I created a Postgres DB to store the list of my performances, and the /performances endpoint performs a `SELECT *` on that table and returns two lists: one for upcoming performances and one for those that are in the past. 
+
+While writing the classes for this module in SB/JPA, I enjoyed the convenience of seeding the data to the DB from a CSV. Since the application never performs any writes to the DB outside of the init script, having the database itself is also overkill for what the end result is. I think a more appropriate solution would be to write an HTTP server in GO along with a CSV parser. That way I could end up with a very small self-contained binary and the CSV file would be the "version of truth" for the list of my performances (which could remain in the repo and be version controlled as well). However, I still need to learn more about templating in GO and whether or not I want to use something like Templ instead of the standard library. So far, I don't see any reason to stray from the standard library for the HTTP server part. 
+
+To see the site in all it's over-engineered glory you can [click this link](https://www.abhiche.com) or the one on the About page. Hopefully I'll put together a more streamlined alternative soon, but until then this was certainly a fun side project and it is certainly serving its purpose!
