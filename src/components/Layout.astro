@@ -39,12 +39,6 @@ const googleVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <meta property="og:site_name" content="Mocalabs.dev" />
     {ogImage && <meta property="og:image" content={ogImage} />}
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content={ogImage ? "summary_large_image" : "summary"} />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    {ogImage && <meta name="twitter:image" content={ogImage} />}
-
     <!-- JSON-LD -->
     <slot name="head" />
 
@@ -55,6 +49,8 @@ const googleVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400&display=swap"
       rel="stylesheet"
     />
+    <!-- Umami -->
+    <script defer src="https://stats.mocalabs.dev/script.js" data-website-id="c8f27a23-b69a-4ee2-a48b-bc2768feb6a6"></script>
   </head>
   <body>
     <div class="page">
