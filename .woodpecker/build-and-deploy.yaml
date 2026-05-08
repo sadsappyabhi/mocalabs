@@ -15,3 +15,5 @@ steps:
         - ${CI_COMMIT_SHA}
       dockerfile: Dockerfile
       insecure: false
+      debug: true
+      verbose: true
