@@ -7,8 +7,8 @@ steps:
     image: docker:24-dind
     privileged: true
     environment:
-      - DOCKER_HOST=unix:///var/run/docker.sock
-      - REGISTRY_PASSWORD=${REGISTRY_PASSWORD}
+      DOCKER_HOST: unix:///var/run/docker.sock
+      REGISTRY_PASSWORD: ${REGISTRY_PASSWORD}
     commands:
       - echo "Logging in to registry ..."
       - docker login -u abby -p "${REGISTRY_PASSWORD}" registry.mocalabs.dev
