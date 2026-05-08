@@ -4,26 +4,15 @@ when:
 
 steps:
   - name: build-and-push
-    image: docker:24-dind
+    image: plugins/docker
     settings:
       registry: registry.mocalabs.dev
       username: abby
       password: ${REGISTRY_PASSWORD}
-      repo: registry.mocalabs.dev/mocalabs/blog
+      repo: mocalabs/blog
       tags:
         - latest
         - ${CI_COMMIT_SHA}
       dockerfile: Dockerfile
       insecure: false
       debug: true
-      verbose: true
-    environment:
-      - DOCKER_HOST=unix:///var/run/docker.sock
-    commands:
-      - echo "Logging in to registry as user abby ..."
-      - docker login -u abby -p ${REGISTRY_PASSWORD} registry.mocalabs.dev
-      - echo "Building blog container ..."
-      - docker build --no-cache -t registry.mocalabs.dev/mocalabs/blog:${CI_COMMIT_SHA}
-      - echo "Pushing container to registry ..."
-      - docker push registry.mocalabs.dev/mocalabs/blog:${CI_COMMIT_SHA}
-      - echo "Done building and pushing blog container to registry."
