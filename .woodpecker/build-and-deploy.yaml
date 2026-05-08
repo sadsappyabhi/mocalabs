@@ -9,7 +9,7 @@ steps:
       registry: registry.mocalabs.dev
       username: abby
       password: ${REGISTRY_PASSWORD}
-      repo: registry.mocalabs.dev/mocalabs
+      repo: registry.mocalabs.dev/mocalabs/blog
       tags:
         - latest
         - ${CI_COMMIT_SHA}
