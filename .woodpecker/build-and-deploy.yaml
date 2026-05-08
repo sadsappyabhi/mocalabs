@@ -3,17 +3,24 @@ when:
     branch: main
 
 steps:
+  - name: login
+    image: plugins/docker
+    settings:
+      registry: registry.mocalabs.dev
+      username: abby
+      password: ${REGISTRY_PASSWORD}
+
   - name: build-and-push
-    image: woodpeckerci/plugin-docker-buildx
+    image: plugins/docker
     settings:
       repo: registry.mocalabs.dev/mocalabs/blog
-      registry: https://registry.mocalabs.dev
+      registry: registry.mocalabs.dev
       username: abby
       password: ${REGISTRY_PASSWORD}
       tags:
         - latest
         - ${CI_COMMIT_SHA}
       dockerfile: Dockerfile
-      insecure: false
+      # insecure: false
       debug: true
       verbose: true
