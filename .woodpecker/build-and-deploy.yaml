@@ -4,7 +4,7 @@ when:
 
 steps:
   - name: build-and-push
-    image: plugins/docker
+    image: debian
     settings:
       registry: registry.mocalabs.dev
       username: abby
