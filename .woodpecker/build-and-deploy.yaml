@@ -18,8 +18,8 @@ steps:
       username: abby
       password: ${REGISTRY_PASSWORD}
       tags:
-        - latest
-        - ${CI_COMMIT_SHA}
+        - registry.mocalabs.dev/mocalabs/blog:latest
+        - registry.mocalabs.dev/mocalabs/blog:${CI_COMMIT_SHA}
       dockerfile: Dockerfile
       # insecure: false
       debug: true
