@@ -4,7 +4,7 @@ when:
 
 steps:
   - name: build-and-push
-    image: woodpeckerci/plugin-docker-buildx
+    image: plugins/docker
     settings:
       repo: registry.mocalabs.dev/mocalabs/blog
       registry: https://registry.mocalabs.dev
