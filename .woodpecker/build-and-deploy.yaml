@@ -4,12 +4,12 @@ when:
 
 steps:
   - name: build-and-push
-    image: debian
+    image: woodpeckerci/plugin-docker-buildx
     settings:
-      registry: registry.mocalabs.dev
+      repo: registry.mocalabs.dev/mocalabs/blog
+      registry: https://registry.mocalabs.dev
       username: abby
       password: ${REGISTRY_PASSWORD}
-      repo: registry.mocalabs.dev/mocalabs/blog
       tags:
         - latest
         - ${CI_COMMIT_SHA}
