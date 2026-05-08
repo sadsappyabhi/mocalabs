@@ -1,0 +1,17 @@
+when:
+  - event: push
+    branch: main
+
+steps:
+  - name: build-and-push
+    image: plugins/docker
+    settings:
+      registry: registry.mocalabs.dev
+      username: abby
+      password: ${REGISTRY_PASSWORD}
+      repo: registry.mocalabs.dev/mocalabs
+      tags:
+        - latest
+        - ${CI_COMMIT_SHA}
+      dockerfile: Dockerfile
+      insecure: false
