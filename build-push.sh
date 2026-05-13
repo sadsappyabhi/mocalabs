@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "Switching off Astro telemetry ..."
+npx astro telemetry disable
 echo "Building blog container ..."
 docker build --no-cache -t registry.mocalabs.dev/mocalabs/blog:latest .
 echo "Pushing container to registry ..."
