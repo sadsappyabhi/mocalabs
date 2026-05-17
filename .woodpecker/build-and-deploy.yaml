@@ -9,7 +9,7 @@ steps:
       registry: registry.mocalabs.dev
       repo: registry.mocalabs.dev/mocalabs/blog
       tags:
-        - latest
+        #- latest
         - ${CI_COMMIT_SHA:0:8}
       cache: true
       skip_tls_verify: false
