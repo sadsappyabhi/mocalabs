@@ -27,7 +27,9 @@ steps:
     image: woodpeckerci/plugin-docker-buildx
     settings:
       repo: registry.mocalabs.dev/mocalabs/blog
-      tag: ${CI_COMMIT_SHA:0:8}
+      tags:
+        - latest
+        - ${CI_COMMIT_SHA:0:8}
       registry: registry.mocalabs.dev
       cache: false
       username:
