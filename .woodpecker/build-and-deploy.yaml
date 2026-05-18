@@ -9,9 +9,10 @@ steps:
       registry: registry.mocalabs.dev
       repo: registry.mocalabs.dev/mocalabs/blog
       tags:
-        #- latest
+        - latest
         - ${CI_COMMIT_SHA:0:8}
-      cache: true
+      # Disable cache to force a re-build on each run
+      cache: false
       skip_tls_verify: false
       build_args:
         - COMMIT_SHA=${CI_COMMIT_SHA}
