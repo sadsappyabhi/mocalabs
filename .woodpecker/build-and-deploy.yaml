@@ -1,23 +1,57 @@
 when:
   - event: [push, pull_request_closed, manual]
-    branch: main
+    branch: [main, woodpecker-ci-testing]
+
+# steps:
+#   - name: build-and-push
+#     image: woodpeckerci/plugin-kaniko
+#     settings:
+#       registry: registry.mocalabs.dev
+#       repo: registry.mocalabs.dev/mocalabs/blog
+#       tags:
+#         - latest
+#         - ${CI_COMMIT_SHA:0:8}
+#       # Disable cache to force a re-build on each run
+#       cache: false
+#       skip_tls_verify: false
+#       build_args:
+#         - COMMIT_SHA=${CI_COMMIT_SHA}
+#         - COMMIT_AUTHOR_EMAIL=${CI_COMMIT_AUTHOR_EMAIL}
+#       username:
+#         from_secret: REGISTRY_USERNAME
+#       password:
+#         from_secret: REGISTRY_PASSWORD
 
 steps:
   - name: build-and-push
-    image: woodpeckerci/plugin-kaniko
+    image: woodpeckerci/plugin-docker-buildx
     settings:
-      registry: registry.mocalabs.dev
       repo: registry.mocalabs.dev/mocalabs/blog
       tags:
         - latest
         - ${CI_COMMIT_SHA:0:8}
-      # Disable cache to force a re-build on each run
+      registry: registry.mocalabs.dev
       cache: false
-      skip_tls_verify: false
-      build_args:
-        - COMMIT_SHA=${CI_COMMIT_SHA}
-        - COMMIT_AUTHOR_EMAIL=${CI_COMMIT_AUTHOR_EMAIL}
       username:
         from_secret: REGISTRY_USERNAME
       password:
         from_secret: REGISTRY_PASSWORD
+
+  - name: ssh-and-deploy
+    image: appleboy/drone-ssh
+    settings:
+      host:
+        - 46.225.180.241
+      username: abby
+      port: 88
+      key:
+        from_secret: SSH_KEY
+      script:
+        - echo "Changing into mocalabs/blog directory ..."
+        - cd /opt/apps/mocalabs
+        - echo "Tearing down current container ..."
+        - docker compose down
+        - echo "Removing old and unused images ..."
+        - docker image prune -a
+        - echo "Pulling and running latest image from registry ..."
+        - docker compose pull && docker compose up -d
