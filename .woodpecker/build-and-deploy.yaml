@@ -29,6 +29,7 @@ steps:
       repo: registry.mocalabs.dev/mocalabs/blog
       tag: ${CI_COMMIT_SHA:0:8}
       registry: registry.mocalabs.dev
+      cache: false
       username:
         from_secret: REGISTRY_USERNAME
       password:
