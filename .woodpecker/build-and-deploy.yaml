@@ -2,26 +2,6 @@ when:
   - event: [push, pull_request_closed, manual]
     branch: [main, woodpecker-ci-testing]
 
-# steps:
-#   - name: build-and-push
-#     image: woodpeckerci/plugin-kaniko
-#     settings:
-#       registry: registry.mocalabs.dev
-#       repo: registry.mocalabs.dev/mocalabs/blog
-#       tags:
-#         - latest
-#         - ${CI_COMMIT_SHA:0:8}
-#       # Disable cache to force a re-build on each run
-#       cache: false
-#       skip_tls_verify: false
-#       build_args:
-#         - COMMIT_SHA=${CI_COMMIT_SHA}
-#         - COMMIT_AUTHOR_EMAIL=${CI_COMMIT_AUTHOR_EMAIL}
-#       username:
-#         from_secret: REGISTRY_USERNAME
-#       password:
-#         from_secret: REGISTRY_PASSWORD
-
 steps:
   - name: build-and-push
     image: woodpeckerci/plugin-docker-buildx
