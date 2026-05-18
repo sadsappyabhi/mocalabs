@@ -36,3 +36,22 @@ steps:
         from_secret: REGISTRY_USERNAME
       password:
         from_secret: REGISTRY_PASSWORD
+
+  - name: ssh-and-deploy
+    image: appleboy/drone-ssh
+    settings:
+      host:
+        - 46.225.180.241
+      username: abby
+      port: 88
+      key:
+        from_secret: SSH_KEY
+      script:
+        - echo "Changing into mocalabs/blog directory ..."
+        - cd /opt/apps/mocalabs
+        - echo "Tearing down current container ..."
+        - docker compose down
+        - echo "Removing old and unused images ..."
+        - docker image prune -a
+        - echo "Pulling and running latest image from registry ..."
+        - docker compose pull && docker compose up -d
