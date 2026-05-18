@@ -23,7 +23,7 @@ when:
 #         from_secret: REGISTRY_PASSWORD
 
 steps:
-  - name: build-and-push-buildx
+  - name: build-and-push
     image: woodpeckerci/plugin-docker-buildx
     settings:
       repo: registry.mocalabs.dev/mocalabs/blog
