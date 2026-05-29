@@ -26,7 +26,7 @@ Now with the DB container's IP address, I could create the tunnel:
 ssh -L 5432:<container-ip-address>:5432 <user>@mocalabs.dev -p <ssh-port-number> -i ~/.ssh/path_to_private_key
 ```
 
-I then tested the connection in both DataGrip and DBeaver - Make sure to set the config for the SSH connection to your VPS IP or hostname with the correct port and select your identity file for authentication. Once the SSH tunnel is tested and working, you can add the Postgres connection with the container's IP as host along with your database credentials. The URL should be:
+I then tested the connection in both DataGrip and DBeaver &mdash; Make sure to set the config for the SSH connection to your VPS IP or hostname with the correct port and select your identity file for authentication. Once the SSH tunnel is tested and working, you can add the Postgres connection with the container's IP as host along with your database credentials. The URL should be:
 
 ```shell
 jdbc:postgresql://<db-container-ip>:5432/<db-nanme>
